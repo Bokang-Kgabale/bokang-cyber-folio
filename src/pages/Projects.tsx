@@ -27,7 +27,7 @@ const Projects = () => {
       id: 1,
       title: "Telehealth Online Medical Consultation",
       description: "A comprehensive telehealth application enabling remote medical consultations with integrated video conferencing and automated medical data capture. Features OCR for vital signs processing and real-time patient-doctor communication.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
       technologies: ["Python", "Django", "React", "HTML", "CSS", "JavaScript", "OCR", "WebRTC"],
       features: [
         "Video conferencing integration",
