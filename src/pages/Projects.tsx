@@ -5,7 +5,24 @@ import { ExternalLink, Github, Globe, Zap, Database, Smartphone } from "lucide-r
 import Navbar from "@/components/Navbar";
 
 const Projects = () => {
-  const projects = [
+  interface Project {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    technologies: string[];
+    features: string[];
+    links?: {
+      demo?: string;
+      github?: string;
+    };
+    status: string;
+    type: string;
+    icon: any;
+    note?: string;
+  }
+
+  const projects: Project[] = [
     {
       id: 1,
       title: "Telehealth Online Medical Consultation",
@@ -19,13 +36,10 @@ const Projects = () => {
         "Real-time doctor-patient communication",
         "Secure data storage and transmission"
       ],
-      links: {
-        demo: "https://fir-rtc-521a2.web.app/",
-        github: "https://github.com/Bokang-Kgabale/Telehealth-Application"
-      },
       status: "Deployed",
       type: "Web Application",
-      icon: Globe
+      icon: Globe,
+      note: "Repository is private (Company project)"
     },
     {
       id: 2,
@@ -163,30 +177,30 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-4">
-                      {project.links?.demo && (
-                        <Button asChild className="bg-gradient-to-r from-primary to-secondary hover:opacity-80 neon-border">
-                          <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                            <Globe className="w-4 h-4" />
-                            Live Demo
-                          </a>
-                        </Button>
-                      )}
-                      {project.links?.github && (
-                        <Button variant="outline" asChild className="border-secondary text-secondary hover:bg-secondary/10">
-                          <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                            <Github className="w-4 h-4" />
-                            Source Code
-                          </a>
-                        </Button>
-                      )}
-                      {project.note && (
-                        <span className="text-sm text-muted-foreground italic flex items-center gap-2">
-                          <Database className="w-4 h-4" />
-                          {project.note}
-                        </span>
-                      )}
-                    </div>
+                     <div className="flex flex-wrap gap-4">
+                       {project.links && project.links.demo && (
+                         <Button asChild className="bg-gradient-to-r from-primary to-secondary hover:opacity-80 neon-border">
+                           <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                             <Globe className="w-4 h-4" />
+                             Live Demo
+                           </a>
+                         </Button>
+                       )}
+                       {project.links && project.links.github && (
+                         <Button variant="outline" asChild className="border-secondary text-secondary hover:bg-secondary/10">
+                           <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                             <Github className="w-4 h-4" />
+                             Source Code
+                           </a>
+                         </Button>
+                       )}
+                       {project.note && (
+                         <span className="text-sm text-muted-foreground italic flex items-center gap-2">
+                           <Database className="w-4 h-4" />
+                           {project.note}
+                         </span>
+                       )}
+                     </div>
                   </div>
                   
                   <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
