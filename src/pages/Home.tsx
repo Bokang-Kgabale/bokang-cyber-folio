@@ -108,8 +108,8 @@ const Home = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl"></div>
               <img 
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&q=80" 
-                alt="Cyberpunk developer workspace"
+                src="https://images.unsplash.com/photo-1502085671122-2d218cd434e6?auto=format&fit=crop&w=800&q=80" 
+                alt="silhouette-of-man-standing-on-the-ground-by-Adam Neumann"
                 className="relative rounded-lg w-full h-[400px] object-cover border border-primary/30 neon-border"
               />
             </div>
