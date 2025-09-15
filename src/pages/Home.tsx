@@ -23,7 +23,7 @@ const Home = () => {
       degree: "Diploma in Information Technology",
       institution: "Central University of Technology",
       location: "Bloemfontein, Free State",
-      status: "Graduating September 2025"
+      status: "Graduated"
     },
     {
       year: "2022",
@@ -37,7 +37,7 @@ const Home = () => {
       degree: "Matriculation",
       institution: "Kopanong Secondary School",
       location: "Bloemfontein, Free State",
-      status: "Completed"
+      status: "Graduated"
     }
   ];
 
@@ -107,9 +107,9 @@ const Home = () => {
             
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1502085671122-2d218cd434e6?auto=format&fit=crop&w=800&q=80" 
-                alt="silhouette-of-man-standing-on-the-ground-by-Adam Neumann"
+              <img
+                src="/src/assets/DSC00909.jpg"
+                alt="Bokang Kgabale - Full-Stack Engineer"
                 className="relative rounded-lg w-full h-[400px] object-cover border border-primary/30 neon-border"
               />
             </div>
@@ -132,7 +132,6 @@ const Home = () => {
               </div>
               <div className="space-y-1 text-sm text-muted-foreground">
                 <p>Born: 28 December 2002</p>
-                <p>ID: 0212285544087</p>
                 <p>Nationality: South African</p>
                 <p>Gender: Male</p>
               </div>
@@ -144,9 +143,8 @@ const Home = () => {
                 <span className="font-semibold text-secondary">Location</span>
               </div>
               <div className="space-y-1 text-sm text-muted-foreground">
-                <p>33889 Toka Street</p>
-                <p>Turflaagte, Bloemfontein</p>
-                <p>Free State, 9323</p>
+                <p>Bloemfontein</p>
+                <p>Free State</p>
                 <p>South Africa</p>
               </div>
             </Card>

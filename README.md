@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# Bokang Cyber Folio 🌐
 
-## Project info
+A cybersecurity-themed portfolio website showcasing Bokang Kgabale's professional journey as a Full-Stack Engineer. Built with modern web technologies and featuring a sleek cyber aesthetic with neon styling.
 
-**URL**: https://lovable.dev/projects/9697bb6e-5336-4df6-aa11-284933035b9d
+## ✨ Features
 
-## How can I edit this code?
+- **Cyber-themed Design**: Modern cyberpunk aesthetic with neon effects and animations
+- **Responsive Layout**: Optimized for all device sizes
+- **Professional Portfolio**: Showcase of skills, education, experience, and projects
+- **Interactive UI**: Smooth animations and hover effects
+- **Performance Optimized**: Built with Vite for fast loading and development
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9697bb6e-5336-4df6-aa11-284933035b9d) and start prompting.
+- Node.js (version 16 or higher) or Bun
+- npm or Bun package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone https://github.com/Bokang-Kgabale/bokang-cyber-folio.git
+cd bokang-cyber-folio
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+npm install
+# or
+bun install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server:
+```bash
+npm run dev
+# or
+bun run dev
+```
 
-**Use GitHub Codespaces**
+4. Open your browser and visit `http://localhost:8080`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠️ Development Commands
 
-## What technologies are used for this project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-This project is built with:
+## 🧰 Tech Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This portfolio is built with cutting-edge technologies:
 
-## How can I deploy this project?
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS with custom cyberpunk theme
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Routing**: React Router DOM
+- **State Management**: TanStack Query for server state
+- **Icons**: Lucide React
+- **Theme**: Dark mode support with next-themes
 
-Simply open [Lovable](https://lovable.dev/projects/9697bb6e-5336-4df6-aa11-284933035b9d) and click on Share -> Publish.
+## 📁 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+src/
+├── components/
+│   ├── ui/           # shadcn/ui components
+│   └── Navbar.tsx    # Navigation component
+├── pages/
+│   ├── Home.tsx      # Main portfolio page
+│   ├── Projects.tsx  # Projects showcase
+│   └── NotFound.tsx  # 404 page
+├── lib/
+│   └── utils.ts      # Utility functions
+├── hooks/            # Custom React hooks
+└── assets/           # Static assets
+```
 
-Yes, you can!
+## 🎨 Design Features
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Cyber Aesthetic**: Neon glows, gradient effects, and sci-fi inspired animations
+- **Custom Animations**: Fade-in, slide-in, pulse-neon, and cyber-scan effects
+- **Responsive Design**: Mobile-first approach with Tailwind breakpoints
+- **Interactive Elements**: Hover effects and smooth transitions
+- **Typography**: Modern font combinations with cyber-themed headings
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🚀 Deployment
+
+The site can be deployed to various platforms:
+
+- **Vercel**: Connect your GitHub repo for automatic deployments
+- **Netlify**: Drag and drop the build folder or connect via Git
+- **GitHub Pages**: Use GitHub Actions for CI/CD deployment
+
+Build the project for production:
+```bash
+npm run build
+```
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📧 Contact
+
+**Bokang Kgabale**
+- Email: bokangkgabale33889@gmail.com
+- LinkedIn: [bokang-kgabale-4a7a4b324](https://www.linkedin.com/in/bokang-kgabale-4a7a4b324)
+- GitHub: [Bokang-Kgabale](https://github.com/Bokang-Kgabale)
