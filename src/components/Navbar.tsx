@@ -8,11 +8,11 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/30">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-primary neon-text">
+          <Link to="/" className="text-xl sm:text-2xl font-bold text-primary neon-text truncate mr-2">
             &lt;BOKANG.DEV/&gt;
           </Link>
           
-          <div className="flex space-x-6">
+          <div className="flex space-x-2 sm:space-x-6">
             <Link to="/">
               <Button 
                 variant={location.pathname === "/" ? "default" : "ghost"}

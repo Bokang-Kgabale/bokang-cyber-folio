@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Globe, Zap, Database, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Globe, Zap, Database, Smartphone, Brain, Home, Layout } from "lucide-react";
 import Navbar from "@/components/Navbar";
 
 const Projects = () => {
@@ -15,43 +15,114 @@ const Projects = () => {
     links?: {
       demo?: string;
       github?: string;
+      playstore?: string;
     };
     status: string;
     type: string;
     icon: any;
     note?: string;
+    highlight?: boolean;
   }
 
   const projects: Project[] = [
     {
       id: 1,
-      title: "Telehealth Online Medical Consultation",
-      description: "A comprehensive telehealth application enabling remote medical consultations with integrated video conferencing and automated medical data capture. Features OCR for vital signs processing and real-time patient-doctor communication.",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "Django", "React", "HTML", "CSS", "JavaScript", "OCR", "WebRTC"],
+      title: "Pampiri — AI-Powered Receipt Scanner",
+      description: "Enterprise-grade Intelligent Document Processing platform that turns physical receipts and invoices into structured, exportable digital data within seconds. Built for accountants, small businesses, and fleet managers who need to ditch manual data entry.",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Flutter", "Dart", "FastAPI", "Python", "Firebase", "Redis", "Docker", "DeepSeek AI", "Google Cloud OCR", "GitHub Actions", "PayFast"],
       features: [
-        "Video conferencing integration",
-        "OCR-based vital signs capture",
-        "Automated medical data processing",
-        "Real-time doctor-patient communication",
-        "Secure data storage and transmission"
+        "AI-powered 21-field data extraction (VAT, merchant, line items)",
+        "Batch scanning — process a month of receipts in one session",
+        "Export to Excel, CSV, Word and JSON",
+        "PayFast subscription with tokenized recurring billing",
+        "POPIA compliant — data on secure servers with access controls",
+        "CI/CD pipeline via GitHub Actions"
       ],
-      status: "Deployed",
-      type: "Web Application",
-      icon: Globe,
-      note: "Repository is private (Company project)"
+      links: {
+        demo: "https://mypampiri.co.za",
+        playstore: "https://play.google.com/store/apps/details?id=com.nexmotiontechnologies.pampiri"
+      },
+      status: "Live on Google Play",
+      type: "Mobile + SaaS",
+      icon: Brain,
+      highlight: true
     },
     {
       id: 2,
+      title: "Umoja Students Lease Management System",
+      description: "Full-featured digital lease management platform for Umoja Student Accommodation. Students apply, sign, and submit lease agreements online. Admins manage applications, documents, and communicate via automated email — all with role-based access control.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+      technologies: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "Firebase", "Firestore", "Node.js", "Express", "Nodemailer"],
+      features: [
+        "Online lease application and digital signing",
+        "Document upload and management portal",
+        "Admin dashboard — approve, reject, communicate",
+        "Automated email notifications via Nodemailer",
+        "Role-based access control (student vs admin)",
+        "Real-time application status tracking"
+      ],
+      links: {
+        demo: "https://leasing.umojastudents.co.za"
+      },
+      status: "Live Client Site",
+      type: "Web Application",
+      icon: Home,
+      highlight: true
+    },
+    {
+      id: 3,
+      title: "Telehealth Online Medical Consultation",
+      description: "Remote medical consultation platform with integrated WebRTC video conferencing and automated vital sign capture. Patients photograph temperature and weight readings via webcam — OCR processes the data and stores it for doctors to review before the call.",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Python", "Django", "React", "HTML", "CSS", "JavaScript", "OCR", "WebRTC", "Firebase", "FastAPI"],
+      features: [
+        "WebRTC video conferencing integration",
+        "OCR-based vital signs capture from webcam",
+        "Automated medical data processing and storage",
+        "Real-time doctor-patient communication",
+        "Secure data transmission and storage"
+      ],
+      links: {
+        demo: "https://fir-rtc-521a2.web.app/",
+        github: "https://github.com/Bokang-Kgabale/Telehealth-Application"
+      },
+      status: "Deployed",
+      type: "Web Application",
+      icon: Globe,
+      note: "Built during internship at Kinetix Engineering Solutions"
+    },
+    {
+      id: 4,
+      title: "NexMotion Technologies — Client Portfolio",
+      description: "Frontend development and UX contributions across 10+ live production websites for clients in legal, hospitality, construction, education and nonprofit sectors — as part of the core NexMotion engineering team.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
+      technologies: ["React", "HTML", "CSS", "JavaScript", "Tailwind CSS", "WordPress", "Firebase", "Hostinger"],
+      features: [
+        "lesibagroup.co.za — government procurement company",
+        "10+ live production sites across multiple sectors",
+        "Responsive, mobile-first design across all projects",
+        "Client-facing delivery and technical support",
+        "Branding, UI/UX and full website development"
+      ],
+      links: {
+        demo: "https://nexmotiontechnologies.co.za/projects.html"
+      },
+      status: "10+ Live Sites",
+      type: "Web Development",
+      icon: Layout
+    },
+    {
+      id: 5,
       title: "WebRTC Video Call Application",
-      description: "A sophisticated WebRTC-based video call application with FastAPI backend for signaling, Node.js Express server for TURN credentials, and Firebase Firestore integration for seamless real-time communication.",
+      description: "Standalone WebRTC video call application with FastAPI signaling backend, Node.js Express server for TURN credentials, and Firebase Firestore for real-time connection management. Embedded into the Telehealth platform above.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
       technologies: ["Node.js", "Python", "FastAPI", "WebRTC", "Firebase", "HTML", "CSS", "JavaScript"],
       features: [
-        "Real-time video communication",
+        "Real-time peer-to-peer video communication",
         "FastAPI signaling server",
         "TURN server credentials management",
-        "Firebase Firestore integration",
+        "Firebase Firestore for connection state",
         "Cross-platform compatibility"
       ],
       links: {
@@ -62,26 +133,22 @@ const Projects = () => {
       icon: Zap
     },
     {
-      id: 3,
-      title: "Past-Question-Paper Mobile App",
-      description: "A comprehensive mobile application developed during internship at Kinetix Engineering Solutions. Provides matric students with digital access to practice multiple-choice quizzes based on past exam papers, categorized by subject, year, and topic.",
+      id: 6,
+      title: "Past Question Paper Mobile App",
+      description: "Matric exam-prep app on Google Play. Provides South African matric students with subject-specific multiple-choice quizzes from past exam papers, organised by year and topic. Added new question types, revamped Firebase database architecture, and improved frontend UI during internship.",
       image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
       technologies: ["Flutter", "Dart", "Firebase", "Google Play Store"],
       features: [
-        "Subject-specific quiz categories",
-        "Year and exam type filtering",
+        "Subject-specific quiz categories by year and topic",
         "Multiple question type support",
-        "Firebase backend integration",
+        "Firebase backend with revamped database architecture",
         "Real-time progress tracking",
-        "Google Play Store deployment"
+        "Published on Google Play Store"
       ],
-      links: {
-        // GitHub repository is private as mentioned in CV
-      },
-      status: "Published on Google Play Store",
+      status: "Published on Google Play",
       type: "Mobile Application",
       icon: Smartphone,
-      note: "Repository is private (Company project)"
+      note: "Repository is private — Kinetix Engineering Solutions client project"
     }
   ];
 
@@ -90,86 +157,98 @@ const Projects = () => {
       "Python": "border-accent/50 text-accent",
       "Django": "border-primary/50 text-primary",
       "React": "border-secondary/50 text-secondary",
+      "React 18": "border-secondary/50 text-secondary",
+      "TypeScript": "border-secondary/50 text-secondary",
       "JavaScript": "border-accent/50 text-accent",
       "Node.js": "border-primary/50 text-primary",
       "Flutter": "border-secondary/50 text-secondary",
       "Dart": "border-secondary/50 text-secondary",
       "Firebase": "border-accent/50 text-accent",
+      "Firestore": "border-accent/50 text-accent",
       "WebRTC": "border-primary/50 text-primary",
       "FastAPI": "border-primary/50 text-primary",
       "HTML": "border-secondary/50 text-secondary",
       "CSS": "border-secondary/50 text-secondary",
-      "OCR": "border-accent/50 text-accent"
+      "OCR": "border-accent/50 text-accent",
+      "Docker": "border-primary/50 text-primary",
+      "Redis": "border-accent/50 text-accent",
+      "DeepSeek AI": "border-primary/50 text-primary",
+      "Tailwind CSS": "border-secondary/50 text-secondary",
+      "GitHub Actions": "border-muted/50 text-muted-foreground",
     };
     return colors[tech] || "border-muted/50 text-muted-foreground";
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
+      <section className="pt-24 pb-16 px-4 sm:px-6">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl lg:text-6xl font-bold text-primary neon-text mb-6 glitch">
             &lt;PROJECTS/&gt;
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore my portfolio of full-stack applications, mobile solutions, and innovative projects 
-            that showcase my expertise in modern web technologies and cross-platform development.
+            Production-grade applications, deployed products, and client work.
+            Everything here is live, real, and built by me.
           </p>
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-16 px-6">
+      {/* Projects */}
+      <section className="py-8 px-4 sm:px-6">
         <div className="container mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {projects.map((project, index) => {
               const IconComponent = project.icon;
               return (
-                <div key={project.id} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={`space-y-6 animate-fade-in ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center border border-primary/50">
-                        <IconComponent className="w-5 h-5 text-primary" />
+                <div
+                  key={project.id}
+                  className={`grid lg:grid-cols-2 gap-10 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
+                >
+                  {/* Text side */}
+                  <div className={`space-y-5 animate-fade-in text-center lg:text-left ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                      <div className="w-9 h-9 bg-primary/20 rounded-full flex items-center justify-center border border-primary/50 flex-shrink-0">
+                        <IconComponent className="w-4 h-4 text-primary" />
                       </div>
-                      <Badge variant="outline" className="border-primary/50 text-primary">
+                      <Badge variant="outline" className="border-primary/50 text-primary text-xs">
                         {project.type}
                       </Badge>
-                      <Badge variant="outline" className="border-secondary/50 text-secondary">
+                      <Badge variant="outline" className={`text-xs ${project.highlight ? 'border-accent text-accent' : 'border-secondary/50 text-secondary'}`}>
                         {project.status}
                       </Badge>
                     </div>
-                    
-                    <h3 className="text-3xl font-bold text-foreground neon-text">
+
+                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground neon-text">
                       {project.title}
                     </h3>
-                    
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+
+                    <p className="text-base text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
 
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-secondary">Key Features:</h4>
-                      <ul className="space-y-2">
+                    <div className="space-y-3 flex flex-col items-center lg:items-start">
+                      <h4 className="text-sm font-semibold text-secondary uppercase tracking-wider">Key Features</h4>
+                      <ul className="space-y-1.5 text-left inline-block">
                         {project.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-muted-foreground">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-accent">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="space-y-3">
+                      <h4 className="text-sm font-semibold text-accent uppercase tracking-wider">Technologies</h4>
+                      <div className="flex flex-wrap justify-center lg:justify-start gap-2">
                         {project.technologies.map((tech, idx) => (
-                          <Badge 
-                            key={idx} 
-                            variant="outline" 
-                            className={`${getTechColor(tech)} hover:bg-current/10 transition-all`}
+                          <Badge
+                            key={idx}
+                            variant="outline"
+                            className={`text-xs ${getTechColor(tech)} hover:bg-current/10 transition-all`}
                           >
                             {tech}
                           </Badge>
@@ -177,38 +256,47 @@ const Projects = () => {
                       </div>
                     </div>
 
-                     <div className="flex flex-wrap gap-4">
-                       {project.links && project.links.demo && (
-                         <Button asChild className="bg-gradient-to-r from-primary to-secondary hover:opacity-80 neon-border">
-                           <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                             <Globe className="w-4 h-4" />
-                             Live Demo
-                           </a>
-                         </Button>
-                       )}
-                       {project.links && project.links.github && (
-                         <Button variant="outline" asChild className="border-secondary text-secondary hover:bg-secondary/10">
-                           <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                             <Github className="w-4 h-4" />
-                             Source Code
-                           </a>
-                         </Button>
-                       )}
-                       {project.note && (
-                         <span className="text-sm text-muted-foreground italic flex items-center gap-2">
-                           <Database className="w-4 h-4" />
-                           {project.note}
-                         </span>
-                       )}
-                     </div>
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
+                      {project.links?.demo && (
+                        <Button asChild className="bg-gradient-to-r from-primary to-secondary hover:opacity-80 neon-border">
+                          <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <Globe className="w-4 h-4" />
+                            Live Site
+                          </a>
+                        </Button>
+                      )}
+                      {project.links?.playstore && (
+                        <Button asChild className="bg-gradient-to-r from-accent/80 to-primary hover:opacity-80">
+                          <a href={project.links.playstore} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <Smartphone className="w-4 h-4" />
+                            Google Play
+                          </a>
+                        </Button>
+                      )}
+                      {project.links?.github && (
+                        <Button variant="outline" asChild className="border-secondary text-secondary hover:bg-secondary/10">
+                          <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <Github className="w-4 h-4" />
+                            Source Code
+                          </a>
+                        </Button>
+                      )}
+                      {project.note && (
+                        <span className="text-xs text-muted-foreground italic flex items-center gap-2 self-center">
+                          <Database className="w-3 h-3 flex-shrink-0" />
+                          {project.note}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  
+
+                  {/* Image side */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-xl"></div>
-                    <img 
+                    <img
                       src={project.image}
                       alt={project.title}
-                      className="relative rounded-lg w-full h-[400px] object-cover border border-primary/30 neon-border hover:border-primary/60 transition-all"
+                      className="relative rounded-lg w-full h-[280px] sm:h-[360px] object-cover border border-primary/30 neon-border hover:border-primary/60 transition-all"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-lg"></div>
                   </div>
@@ -220,54 +308,42 @@ const Projects = () => {
       </section>
 
       {/* Tech Stack Overview */}
-      <section className="py-16 px-6 bg-muted/20 cyber-grid">
+      <section className="py-16 px-4 sm:px-6 bg-muted/20 cyber-grid">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-secondary neon-text">
             &lt;TECHNOLOGY_ARSENAL/&gt;
           </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 bg-card/50 border-primary/30 backdrop-blur-sm hover:border-primary/60 transition-all">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto border border-primary/50">
-                  <Globe className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-primary">Frontend</h3>
-                <p className="text-muted-foreground">React, HTML, CSS, JavaScript</p>
-              </div>
-            </Card>
-            
-            <Card className="p-6 bg-card/50 border-secondary/30 backdrop-blur-sm hover:border-secondary/60 transition-all">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto border border-secondary/50">
-                  <Database className="w-8 h-8 text-secondary" />
-                </div>
-                <h3 className="text-xl font-bold text-secondary">Backend</h3>
-                <p className="text-muted-foreground">Python, Django, Node.js, FastAPI</p>
-              </div>
-            </Card>
-            
-            <Card className="p-6 bg-card/50 border-accent/30 backdrop-blur-sm hover:border-accent/60 transition-all">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto border border-accent/50">
-                  <Smartphone className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold text-accent">Mobile</h3>
-                <p className="text-muted-foreground">Flutter, Dart, Cross-platform</p>
-              </div>
-            </Card>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {[
+              { icon: Globe, color: "primary", title: "Frontend", desc: "React, TypeScript, Tailwind CSS, HTML, CSS, JavaScript" },
+              { icon: Database, color: "secondary", title: "Backend", desc: "Python, FastAPI, Django, Node.js/Express, Redis, Docker" },
+              { icon: Smartphone, color: "accent", title: "Mobile", desc: "Flutter, Dart — deployed to Google Play Store" },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <Card key={i} className={`p-6 bg-card/50 border-${item.color}/30 backdrop-blur-sm hover:border-${item.color}/60 transition-all`}>
+                  <div className="text-center space-y-4">
+                    <div className={`w-14 h-14 bg-${item.color}/20 rounded-full flex items-center justify-center mx-auto border border-${item.color}/50`}>
+                      <Icon className={`w-7 h-7 text-${item.color}`} />
+                    </div>
+                    <h3 className={`text-xl font-bold text-${item.color}`}>{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-4 sm:px-6">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6 text-primary neon-text">
             Interested in My Work?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can collaborate on your next project. I'm always excited 
+            Let's discuss how we can collaborate on your next project. I'm always excited
             to work on innovative solutions and cutting-edge technologies.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -279,7 +355,7 @@ const Projects = () => {
             <Button variant="outline" size="lg" asChild className="border-secondary text-secondary hover:bg-secondary/10">
               <a href="https://github.com/Bokang-Kgabale" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Github className="w-4 h-4" />
-                View All Projects
+                View GitHub
               </a>
             </Button>
           </div>
