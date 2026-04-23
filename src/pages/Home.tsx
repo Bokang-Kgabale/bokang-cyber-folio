@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Mail, MapPin, GraduationCap, Award, Briefcase, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import bokangImage from "../assets/DSC00909.jpg";
+import bokangImage from "../assets/profile.webp";
 import resumePdf from "../assets/Bokang_Kgabale_Resume.pdf";
 
 const Home = () => {
@@ -313,9 +314,9 @@ const Home = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
-              <a href="/projects">
+              <Link to="/projects">
                 View My Work
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
